@@ -112,10 +112,10 @@
     {{-- Other Projects Section --}}
     <section id="projects2" class="min-h-screen bg-gray-100 px-6 py-12 flex items-center">
         <div class="w-full">
-            <h2 class="text-4xl font-bold text-center mb-12">Other Projects</h2>
-            <h3 class="text-2xl font-bold text-center mb-12">Honorable mentions</h3>
+            <h2 class="text-2xl font-bold text-center mb-12">More Projects done</h2>
+        
     
-            <div class="flex justify-between items-center w-full max-w-6xl mx-auto">
+            <div class="flex justify-between items-center w-full max-w-7xl mx-auto">
                 {{-- SkyCast --}}
                 <div class="cursor-pointer group relative bg-white shadow-sm border border-slate-200 rounded-lg w-64 hover:shadow-lg transition-shadow duration-300">
                     <div class="relative h-40 overflow-hidden text-white rounded-t-md">
@@ -148,9 +148,9 @@
                         </p>
                     </div>
                     <div class="px-4 pb-4 pt-0">
-                        <button class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition hover:bg-slate-700">
-                            GitHub link
-                        </button>
+                        <a href="https://github.com/Moses-Mbugs/Nairobi-temperature"  class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition hover:bg-slate-700">
+                            Github Link
+                        </a>
                     </div>
                 </div>
     
