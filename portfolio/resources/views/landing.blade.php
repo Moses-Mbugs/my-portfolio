@@ -44,15 +44,15 @@ dynamic-text {
 
 @section('content')
     {{-- Intro Section --}}
-    <section id="intro" class="min-h-screen flex items-center justify-center bg-white relative">
+    <section id="intro" class="min-h-screen flex items-center justify-center bg-black">
         <div class="text-left">
-            <h1 class="text-6xl font-extrabold text-gray-800 mb-4">
+            <h1 class="text-6xl font-extrabold text-gray-100 mb-4">
                 &lt; Hello, World!/&gt;
             </h1>
-            <p class="text-4xl font-semibold text-gray-700 mb-4">
+            <p class="text-4xl font-semibold text-gray-300 mb-4" >
                 My name is <span class="text-blue-500">Moses Mbugua</span>
             </p>
-            <p class="text-3xl font-medium text-gray-600">
+            <p class="text-3xl font-medium text-gray-200" >
                 I am a <span id="dynamic-text" class="text-green-500"></span>
             </p>
         </div>
@@ -65,23 +65,44 @@ dynamic-text {
     </section>
 
     {{-- Expertise Section --}}
-    <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-6">
-        <h2 class="text-4xl font-bold mb-12">My Expertise</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">
+    <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-zinc-950 px-6 py-16 text-white">
+        <h2 class="text-5xl font-extrabold mb-12 tracking-wide text-center">My Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl">
             <!-- Front-End Development Card -->
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                <div class="text-green-400 text-5xl mb-6">
+                    <i class="fas fa-code"></i>
+                </div>
                 <h3 class="text-2xl font-semibold mb-4">Front-End Development</h3>
-                <p class="text-gray-700">I specialize in crafting responsive, user-friendly interfaces using modern technologies like React, and Tailwind CSS.</p>
+                <p class="text-gray-300 leading-relaxed">
+                    I specialize in crafting responsive, user-friendly interfaces using modern technologies like React and Tailwind CSS.
+                </p>
+                {{--  <ul>
+                    <li>React</li>
+                    <li>Tailwind CSS</li>
+                    <li>CSS</li>
+                    <li>Rive</li>
+                  </ul>  --}}
             </div>
             <!-- Back-End Development Card -->
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                <div class="text-blue-400 text-5xl mb-6">
+                    <i class="fas fa-server"></i>
+                </div>
                 <h3 class="text-2xl font-semibold mb-4">Back-End Development</h3>
-                <p class="text-gray-700">I build robust server-side solutions with frameworks like Node.js, and Laravel, ensuring high performance and scalability.</p>
+                <p class="text-gray-300 leading-relaxed">
+                    I build robust server-side solutions with frameworks like Node.js and Laravel, ensuring high performance and scalability.
+                </p>
             </div>
             <!-- Mobile App Development Card -->
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                <div class="text-yellow-400 text-5xl mb-6">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
                 <h3 class="text-2xl font-semibold mb-4">Mobile App Development</h3>
-                <p class="text-gray-700">I create seamless mobile applications with Flutter and Kotlin to deliver smooth, user-friendly experiences.</p>
+                <p class="text-gray-300 leading-relaxed">
+                    I create seamless mobile applications with Flutter and Kotlin to deliver smooth, user-friendly experiences.
+                </p>
             </div>
         </div>
     </section>
@@ -92,12 +113,15 @@ dynamic-text {
 
 
     {{-- Projects Section --}}
-    <section id="projects" class="min-h-screen bg-white flex flex-col items-center justify-center px-6 py-12">
+    <section id="projects" class="min-h-screen bg-zinc-900 flex flex-col items-center justify-center px-6 py-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between space-y-6 lg:space-y-0 lg:space-x-8 max-w-6xl">
+            <h2 class="text-4xl font-extrabold text-gray-100 mb-8">Featured Project</h2>
             <!-- Left Content -->
             <div class="lg:w-1/2 text-center lg:text-left">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Mzalendo - Android App</h2>
-                <p class="text-gray-600 mb-6">
+                
+                <h2 class="text-3xl font-bold text-gray-100 mb-4">
+                    Mzalendo - Android App</h2>
+                <p class="text-gray-200 mb-6">
                     Mzalendo is an interactive game. You get to pick from different categories and answer questions. The game is designed to be fun and educational on Kenyan matters. 
                     It is a great way to experience Kenya in a humorous way, and get to know random facts.
                 </p>
@@ -111,7 +135,7 @@ dynamic-text {
 
             <!-- Right Slideshow -->
             <div class="lg:w-1/2 relative flex justify-center">
-                <div class="relative w-[300px] h-[600px] overflow-hidden rounded-lg shadow-lg">
+                <div class="relative w-[200px] h-[400px] overflow-hidden rounded-lg shadow-lg">
                     <div class="slideshow relative flex flex-col items-center h-full">
                         <!-- Vertical Images -->
                         <img src="{{ asset('images/mzalendo1.jpg') }}" alt="Screenshot 1" 
@@ -280,8 +304,13 @@ dynamic-text {
                 </div>
 
                 <!-- Decorative Line -->
-                <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 transform -translate-y-1/2"></div>
+                {{--  <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 transform -translate-y-1/2"></div>  --}}
             </div>
+            {{--  <div class="mt-12">
+                <p class="text-sm text-gray-500">
+                    from left to right ''
+                </p>
+            </div>  --}}
         </div>
     </section>
 
@@ -290,16 +319,55 @@ dynamic-text {
                 
     
 
+   
     {{-- Contact Section --}}
-    <section id="contact" class="min-h-screen bg-white">
-        <!-- Contact Page Content -->
+    <section id="contact" class="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <!-- Title -->
+            <h2 class="text-5xl font-extrabold text-gray-900 mb-8 tracking-tight">
+                Get in Touch
+            </h2>
+            <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                I’m available for select freelance projects and collaborations. Got a project in mind? Let’s team up and make it happen!
+            </p>
+            <p class="text-gray-700 mb-12 text-lg">
+                Reach out through my socials or email below.
+            </p>
+    
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-8 mb-16">
+                <a href="https://github.com/moses-mbugs" target="_blank" class="text-gray-800 hover:text-gray-600 transition-transform transform hover:scale-110 text-3xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/moses-mbugua-muigai-01209620a/" target="_blank" class="text-blue-700 hover:text-blue-500 transition-transform transform hover:scale-110 text-3xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/mosaayyyy/" target="_blank" class="text-pink-600 hover:text-pink-400 transition-transform transform hover:scale-110 text-3xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+    
+            <!-- Freelance Inquiry -->
+            <div class="bg-white shadow-xl rounded-lg px-10 py-12 mx-auto max-w-4xl">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">
+                    Let’s Work Together
+                </h3>
+                <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                    Whether you’re looking for a developer to bring your project to life or collaborate on something exciting, feel free to reach out. I’m always open to new challenges and opportunities.
+                </p>
+                <a href="mailto:mbuguam323@gmail.com" class="inline-block bg-green-500 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105">
+                    Contact Me: mbuguam323@gmail.com
+                </a>
+            </div>
+        </div>
     </section>
+
 
     <script>
         const dynamicText = document.getElementById('dynamic-text');
         const roles = [
-            'Junior Fullstack Developer',
-            'Mobile Application Developer'
+            'Junior Fullstack Developer  ',
+            'Mobile Application Developer   '
         ];
         let index = 0;
         let charIndex = 0;
