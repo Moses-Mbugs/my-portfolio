@@ -1,75 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Mbugua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-zinc-950">
+        <a href="#home" class="text-xl font-bold text-green-400">MosesMbugua<span class="text-gray-400">._</span></a>
+        <nav class="flex space-x-6 text-sm">
+            <a href="#home" class="hover:text-green-400">// home</a>
+            <a href="#expertise" class="hover:text-green-400">// expertise</a>
+            <a href="#projects" class="hover:text-green-400">// work</a>
+            <a href="#experience" class="hover:text-green-400">// experience</a>
+            <a href="#contact" class="hover:text-green-400">// contact</a>
+        </nav>
+    </header>
 
-@extends('layouts.app')
-@section('styles1')
-<style>
-/* Slideshow Styles */
-    .slideshow {
-    position: relative;
-    width: 100%; /* Adjust as needed */
-    height: 400px; /* Ensure this matches your design */
-    overflow: hidden;
-}
-
-.slideshow img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.slideshow img:first-child {
-    opacity: 1;
-}
-
-#intro 
-h1 {
-    font-family: 'Courier New', Courier, monospace;
-}
-#intro 
-p {
-    font-family: 'Roboto', sans-serif;
-}
-#
-dynamic-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2d89ef; /* Custom color for dynamic text */
-}
-
-</style>
-@endsection
-
-@section('content')
-    {{-- Intro Section --}}
-    <section id="intro" class="min-h-screen flex items-center justify-center bg-black">
-        <div class="text-left">
-            <h1 class="text-6xl font-extrabold text-gray-100 mb-4">
-                &lt; Hello, World!/&gt;
-            </h1>
-            <p class="text-4xl font-semibold text-gray-300 mb-4" >
-                My name is <span class="text-blue-500">Moses Mbugua</span>
-            </p>
-            <p class="text-3xl font-medium text-gray-200" >
-                I am a <span id="dynamic-text" class="text-green-500"></span>
-            </p>
+    <!-- Intro Section -->
+    <main id="home" class="flex flex-col items-center justify-center h-screen text-center pt-20">
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-red-500 blur-lg opacity-10"></div>
+            <h1 class="text-6xl font-extrabold relative text-green-400">&lt;Hello, World!/&gt;</h1>
         </div>
-        <!-- Scroll Button -->
-        <a href="#expertise" class="absolute bottom-6 animate-bounce">
-            <button class="w-10 h-10 bg-green-900 rounded-full flex items-center justify-center shadow-lg text-white">
-                ↓
-            </button>
-        </a>
-    </section>
+        <h2 class="text-4xl font-bold mt-4">My name is <span class="text-green-400">Moses Mbugua</span></h2>
+        <p class="mt-4 text-lg">I am a <span class="text-green-400" id="typing"></span></p>
 
-    {{-- Expertise Section --}}
+        <div class="absolute bottom-12 animate-bounce">
+            <a href="#expertise">
+                <div class="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Expertise Section -->
     <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-zinc-950 px-6 py-16 text-white">
-        <h2 class="text-5xl font-extrabold mb-12 tracking-wide text-center">My Expertise</h2>
+        <h2 class="text-5xl font-extrabold mb-12 tracking-wide text-center text-green-500">My Expertise</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl">
             <!-- Front-End Development Card -->
-            <div class="bg-gray-800 shadow-lg rounded-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
                 <div class="text-green-400 text-5xl mb-6">
                     <i class="fas fa-code"></i>
                 </div>
@@ -79,7 +60,7 @@ dynamic-text {
                 </p>
             </div>
             <!-- Back-End Development Card -->
-            <div class="bg-gray-800 shadow-lg rounded-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
                 <div class="text-blue-400 text-5xl mb-6">
                     <i class="fas fa-server"></i>
                 </div>
@@ -89,7 +70,7 @@ dynamic-text {
                 </p>
             </div>
             <!-- Mobile App Development Card -->
-            <div class="bg-gray-800 shadow-lg rounded-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
                 <div class="text-yellow-400 text-5xl mb-6">
                     <i class="fas fa-mobile-alt"></i>
                 </div>
@@ -99,27 +80,31 @@ dynamic-text {
                 </p>
             </div>
         </div>
+        <!-- Icons Section -->
+        <div class="mt-12 flex flex-wrap justify-center space-x-8">
+            <i class="fab fa-react text-4xl text-cyan-400"></i>
+            <i class="fab fa-laravel text-4xl text-red-500"></i>
+            <i class="fab fa-js text-4xl text-yellow-400"></i>
+            <i class="fab fa-node text-4xl text-green-500"></i>
+            <i class="fab fa-flutter text-4xl text-blue-400"></i>
+        </div>
     </section>
+    
 
-
-
-
-
-
-    {{-- Projects Section --}}
+    <!-- Work Section -->
     <section id="projects" class="min-h-screen bg-zinc-900 flex flex-col items-center justify-center px-6 py-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between space-y-6 lg:space-y-0 lg:space-x-8 max-w-6xl">
-            <h2 class="text-4xl font-extrabold text-gray-100 mb-8">Featured Project</h2>
+            <h2 class="text-4xl font-extrabold text-green-500 mb-8 ">Featured Project</h2>
             <!-- Left Content -->
             <div class="lg:w-1/2 text-center lg:text-left">
                 
                 <h2 class="text-3xl font-bold text-gray-100 mb-4">
                     Mzalendo - Android App</h2>
-                <p class="text-gray-200 mb-6">
+                <p class="text-gray-200 mb-6  ">
                     Mzalendo is an interactive game. You get to pick from different categories and answer questions. The game is designed to be fun and educational on Kenyan matters. 
                     It is a great way to experience Kenya in a humorous way, and get to know random facts.
                 </p>
-                <p class="text-gray-500 text-xs italic mb-8">
+                <p class="text-green-500 text-xs italic mb-8">
                     Disclaimer: This app is a continuous development app; hence changes and updates are done regularly.
                 </p>
                 <a href="https://play.google.com/store/apps/details?id=com.mzalendo.quizapp&hl=en" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 transition">
@@ -129,18 +114,18 @@ dynamic-text {
 
             <!-- Right Slideshow -->
             <div class="lg:w-1/2 relative flex justify-center">
-                <div class="relative w-[200px] h-[400px] overflow-hidden rounded-lg shadow-lg">
+                <div class="relative w-[250px] h-[515px] overflow-hidden rounded-lg shadow-lg">
                     <div class="slideshow relative flex flex-col items-center h-full">
                         <!-- Vertical Images -->
-                        <img src="{{ asset('images/mzalendo1.jpg') }}" alt="Screenshot 1" 
+                        <img src="images/mzalendo1.jpg" alt="Screenshot 1" 
                             class="absolute w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-500 ease-in-out">
-                        <img src="{{ asset('images/mzalendo2.jpg') }}" alt="Screenshot 2" 
+                        <img src="images/mzalendo2.jpg" alt="Screenshot 2" 
                             class="absolute w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-500 ease-in-out">
-                        <img src="{{ asset('images/mzalendo3.jpg') }}" alt="Screenshot 3" 
+                        <img src="images/mzalendo3.jpg" alt="Screenshot 3" 
                             class="absolute w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-500 ease-in-out">
-                        <img src="{{ asset('images/mzalendo4.jpg') }}" alt="Screenshot 4" 
+                        <img src="images/mzalendo4.jpg" alt="Screenshot 4" 
                             class="absolute w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-500 ease-in-out">
-                        <img src="{{ asset('images/mzalendo5.jpg') }}" alt="Screenshot 5" 
+                        <img src="images/mzalendo5.jpg" alt="Screenshot 5" 
                             class="absolute w-full h-full object-cover rounded-lg opacity-0 transition-opacity duration-500 ease-in-out">
                     </div>
                 </div>
@@ -155,21 +140,20 @@ dynamic-text {
         </div>
     </section>
 
-    
-    {{-- Other Projects Section --}}
-    <section id="projects2" class="min-h-screen bg-gray-50 px-6 py-12 flex flex-col items-center justify-center">
+    <!-- projects 2 -->
+    <section id="projects2" class="min-h-screen bg-black px-6 py-12 flex flex-col items-center justify-center">
         <div class="w-full max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-16">
-                Featured Projects
+            <h2 class="text-4xl font-extrabold text-green-500 text-center mb-16">
+                Other Projects Done
             </h2>
     
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- SkyCast -->
-                <div class="group relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                    <img src="{{ asset('images/skycast.jpg') }}" alt="SkyCast" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                    <img src="images/skycast.jpg" alt="SkyCast" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">SkyCast</h3>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">SkyCast</h3>
+                        <p class="text-gray-200 text-sm mb-4">
                             A mobile weather app built with Dart and Flutter, providing real-time weather updates via OpenWeatherAPI.
                         </p>
                         <a href="#" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
@@ -179,12 +163,12 @@ dynamic-text {
                 </div>
     
                 <!-- Nairobi Temperatures -->
-                <div class="group relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                    <img src="{{ asset('images/skycast.jpg') }}" alt="Nairobi Temperatures" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                    <img src="images/temp.jpeg" alt="Nairobi Temperatures" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Nairobi Temperature Prediction</h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            A machine learning model trained with 30 years of data to predict Nairobis temperatures.
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">Nairobi Temperature Prediction</h3>
+                        <p class="text-gray-200 text-sm mb-4">
+                            A machine learning model trained with 30 years of data to predict Nairobi's temperatures.
                         </p>
                         <a href="https://github.com/Moses-Mbugs/Nairobi-temperature" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
                             GitHub Link &rarr;
@@ -193,11 +177,11 @@ dynamic-text {
                 </div>
     
                 <!-- Random App -->
-                <div class="group relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                    <img src="{{ asset('images/skycast.jpg') }}" alt="Random App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                    <img src="images/random.jpg" alt="Random App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">The Random App</h3>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">The Random App</h3>
+                        <p class="text-gray-200 text-sm mb-4">
                             A Flutter app delivering "Did You Know" facts across categories, designed with a Retro-Neobrutalism aesthetic.
                         </p>
                         <a href="#" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
@@ -207,11 +191,11 @@ dynamic-text {
                 </div>
     
                 <!-- Comic App -->
-                <div class="group relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                    <img src="{{ asset('images/skycast.jpg') }}" alt="Comic App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                    <img src="images/comic.jpg" alt="Comic App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">The Comic/Book App</h3>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">The Comic/Book App</h3>
+                        <p class="text-gray-100 text-sm mb-4">
                             An app for comic and book enthusiasts to discover both free and paid titles.
                         </p>
                         <a href="#" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
@@ -222,18 +206,11 @@ dynamic-text {
             </div>
         </div>
     </section>
-    
-    
 
-
-
-    
-    
-        {{-- Professional Work Section --}}
-  
-    <section id="professional-work" class="min-h-screen bg-gradient-to-r from-gray-50 to-white py-16 px-8">
+    <!-- Experience Section -->
+    <section id="experience" class="min-h-screen bg-black text-white py-16 px-8 pt-20">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-12">Professional Experience</h2>
+            <h2 class="text-4xl font-extrabold text-center text-green-500 mb-12">Professional Experience</h2>
             
             <div class="relative">
                 <!-- Timeline Container -->
@@ -243,9 +220,9 @@ dynamic-text {
                         <div class="timeline-icon w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
                             TCC
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 text-center">Texas Cancer Center</h3>
-                        <p class="text-sm text-gray-500 italic mb-4 text-center">Volunteer • Jan 2021 – Mar 2021</p>
-                        <ul class="text-gray-700 text-sm space-y-2 text-center">
+                        <h3 class="text-xl font-semibold text-gray-100 text-left " >Texas Cancer Center</h3>
+                        <p class="text-sm text-green-500 italic mb-4 text-center ">Volunteer • Jan 2021 – Mar 2021</p>
+                        <ul class="text-gray-200 text-sm space-y-3 text-left">
                             <li>• Managed housekeeping, bookkeeping, and data entry tasks.</li>
                             <li>• Enhanced communication skills through patient interaction.</li>
                             <li>• Fostered connections and developed empathy in healthcare settings.</li>
@@ -257,9 +234,9 @@ dynamic-text {
                         <div class="timeline-icon w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
                             KU
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 text-center">Kenyatta University Teaching Referral Research Hospital</h3>
-                        <p class="text-sm text-gray-500 italic mb-4 text-center">Web Application Developer (Attachee) • Jan 2023 – Apr 2023</p>
-                        <ul class="text-gray-700 text-sm space-y-2 text-center">
+                        <h3 class="text-xl font-semibold text-gray-100 text-center ">Kenyatta University Teaching Referral Research Hospital</h3>
+                        <p class="text-sm text-green-500 italic mb-4 text-center ">Web Application Developer (Attachee) • Jan 2023 – Apr 2023</p>
+                        <ul class="text-gray-200 text-sm space-y-3 text-left">
                             <li>• Built a comprehensive web application using Laravel.</li>
                             <li>• Developed round-robin scheduling for nurse intern placements.</li>
                             <li>• Successfully deployed the system with the team.</li>
@@ -272,9 +249,9 @@ dynamic-text {
                         <div class="timeline-icon w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
                             PC
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 text-center">Palla Credit Limited</h3>
-                        <p class="text-sm text-gray-500 italic mb-4 text-center">Business Developer Intern • Jan 2024 – Mar 2024</p>
-                        <ul class="text-gray-700 text-sm space-y-2 text-center">
+                        <h3 class="text-xl font-semibold text-gray-100 text-center">Palla Credit Limited</h3>
+                        <p class="text-sm text-green-500 italic mb-4 text-center">Business Developer Intern • Jan 2024 – Mar 2024</p>
+                        <ul class="text-gray-200 text-sm space-y-3 text-left">
                             <li>• Proposed workflow automation and efficiency strategies.</li>
                             <li>• Recommended feedback systems to enhance customer satisfaction.</li>
                             <li>• Formulated short-term and long-term development goals.</li>
@@ -286,9 +263,9 @@ dynamic-text {
                         <div class="timeline-icon w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
                             CG
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 text-center">Creatives Garage (NGO)</h3>
-                        <p class="text-sm text-gray-500 italic mb-4 text-center">Web and Mobile Application Developer • May 2024 – Present</p>
-                        <ul class="text-gray-700 text-sm space-y-2 text-center">
+                        <h3 class="text-xl font-semibold text-gray-100 text-center">Creatives Garage (NGO)</h3>
+                        <p class="text-sm text-green-500 italic mb-4 text-center">Web and Mobile Application Developer • May 2024 – Present</p>
+                        <ul class="text-gray-200 text-sm space-y-3 text-left">
                             <li>• Maintained existing systems and optimized performance.</li>
                             <li>• Built custom mobile applications like <strong>Mzalendo</strong>.</li>
                             <li>• Enhanced websites with new functions and pages.</li>
@@ -296,57 +273,44 @@ dynamic-text {
                         </ul>
                     </div>
                 </div>
-
-                <!-- Decorative Line -->
-                {{--  <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 transform -translate-y-1/2"></div>  --}}
             </div>
-            {{--  <div class="mt-12">
-                <p class="text-sm text-gray-500">
-                    from left to right ''
-                </p>
-            </div>  --}}
+            
         </div>
     </section>
 
-
-
-                
-    
-
-   
-    {{-- Contact Section --}}
-    <section id="contact" class="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white py-20 px-6">
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen bg-gray-900 py-20 px-6">
         <div class="max-w-7xl mx-auto text-center">
             <!-- Title -->
-            <h2 class="text-5xl font-extrabold text-gray-900 mb-8 tracking-tight">
+            <h2 class="text-5xl font-extrabold text-green-500 mb-8 tracking-tight">
                 Get in Touch
             </h2>
-            <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+            <p class="text-gray-100 mb-6 text-lg leading-relaxed">
                 I’m available for select freelance projects and collaborations. Got a project in mind? Let’s team up and make it happen!
             </p>
-            <p class="text-gray-700 mb-12 text-lg">
+            <p class="text-gray-100 mb-12 text-lg">
                 Reach out through my socials or email below.
             </p>
     
             <!-- Social Media Links -->
             <div class="flex justify-center space-x-8 mb-16">
-                <a href="https://github.com/moses-mbugs" target="_blank" class="text-gray-800 hover:text-gray-600 transition-transform transform hover:scale-110 text-3xl">
+                <a href="https://github.com/moses-mbugs" target="_blank" class="text-gray-800 hover:text-gray-100 transition-transform transform hover:scale-110 text-3xl">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/moses-mbugua-muigai-01209620a/" target="_blank" class="text-blue-700 hover:text-blue-500 transition-transform transform hover:scale-110 text-3xl">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com/mosaayyyy/" target="_blank" class="text-pink-600 hover:text-pink-400 transition-transform transform hover:scale-110 text-3xl">
+                <a href="https://www.instagram.com/mosaayyyy/" target="_blank" class="text-pink-600 hover:text-pink-700 transition-transform transform hover:scale-110 text-3xl">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
     
             <!-- Freelance Inquiry -->
-            <div class="bg-white shadow-xl rounded-lg px-10 py-12 mx-auto max-w-4xl">
-                <h3 class="text-3xl font-bold text-gray-800 mb-6">
+            <div class="bg-black shadow-xl rounded-lg px-10 py-12 mx-auto max-w-4xl">
+                <h3 class="text-3xl font-bold text-gray-100 mb-6">
                     Let’s Work Together
                 </h3>
-                <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                <p class="text-gray-100 text-lg leading-relaxed mb-8">
                     Whether you’re looking for a developer to bring your project to life or collaborate on something exciting, feel free to reach out. I’m always open to new challenges and opportunities.
                 </p>
                 <a href="mailto:mbuguam323@gmail.com" class="inline-block bg-green-500 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105">
@@ -356,40 +320,49 @@ dynamic-text {
         </div>
     </section>
 
+    <!-- Back-to-Top Button -->
+    <button id="backToTop" class="hidden fixed bottom-8 right-8 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- footer -->
+    <footer class="py-6 bg-gray-800 text-center text-gray-400">
+        <p class="text-sm">©2025 Moses Mbugua Muigai. All Rights Reserved.</p>
+    </footer>
 
     <script>
-        const dynamicText = document.getElementById('dynamic-text');
-        const roles = [
-            'Junior Fullstack Developer  ',
-            'Mobile Application Developer   '
+        // Typing animation
+        const typingElement = document.getElementById("typing");
+        const typingTexts = [
+            "Junior Fullstack Developer",
+            "Mobile Application Developer"
         ];
-        let index = 0;
-        let charIndex = 0;
-        let typing = true;
+        let typingIndex = 0, charIndex = 0;
+        let isDeleting = false;
 
-        function typeEffect() {
-            if (typing) {
-                dynamicText.textContent += roles[index][charIndex];
-                charIndex++;
-                if (charIndex === roles[index].length) {
-                    typing = false;
-                    setTimeout(() => (typing = false), 2000); // Pause before deleting
-                }
+        function type() {
+            const currentText = typingTexts[typingIndex];
+            if (isDeleting) {
+                charIndex--;
             } else {
-                dynamicText.textContent = dynamicText.textContent.slice(0, -1);
-                if (dynamicText.textContent.length === 0) {
-                    typing = true;
-                    index = (index + 1) % roles.length;
-                    charIndex = 0;
-                }
+                charIndex++;
             }
-            setTimeout(typeEffect, typing ? 150 : 100);
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            typeEffect();
-        });
+            typingElement.textContent = currentText.slice(0, charIndex);
+            typingElement.style.borderRight = "2px solid green";
 
-        {{--  slideshow   --}}
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => (isDeleting = true), 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                typingIndex = (typingIndex + 1) % typingTexts.length;
+            }
+
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+
+        type();
+
+        // slideshow
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.slideshow img');
             const prevButton = document.getElementById('prev');
@@ -432,10 +405,31 @@ dynamic-text {
             // Initialize first slide
             showSlide(currentSlide);
         });
-    </script>
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back-to-Top Button Logic
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
     
-@endsection
-
-
-
-
+    </script>
+</body>
+</html>
