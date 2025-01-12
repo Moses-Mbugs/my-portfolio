@@ -6,16 +6,17 @@
     <title>Moses Mbugua</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'JetBrains Mono', monospace;
         }
+        
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
     <header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-zinc-950">
-        <a href="#home" class="text-xl font-bold text-green-400">MosesMbugua<span class="text-gray-400">._</span></a>
+        <a href="#home" class="text-2xl font-bold text-green-400">MosesMbugua<span class="text-gray-400">._</span></a>
         <nav class="flex space-x-6 text-sm">
             <a href="#home" class="hover:text-green-400">// home</a>
             <a href="#expertise" class="hover:text-green-400">// expertise</a>
@@ -26,24 +27,33 @@
     </header>
 
     <!-- Intro Section -->
-    <main id="home" class="flex flex-col items-center justify-center h-screen text-center pt-20">
-        <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-red-500 blur-lg opacity-10"></div>
-            <h1 class="text-6xl font-extrabold relative text-green-400">&lt;Hello, World!/&gt;</h1>
-        </div>
-        <h2 class="text-4xl font-bold mt-4">My name is <span class="text-green-400">Moses Mbugua</span></h2>
-        <p class="mt-4 text-lg">I am a <span class="text-green-400" id="typing"></span></p>
+    
+        <main id="home" class="flex flex-col items-center justify-center h-screen text-center pt-20">
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-red-500 blur-lg opacity-10"></div>
+                <h1 class="text-6xl font-extrabold relative text-green-400">&lt;Hello, World!/&gt;</h1>
+            </div>
+            <h2 class="text-4xl font-bold mt-4">My name is <span class="text-green-400">Moses Mbugua</span></h2>
+            <p class="mt-4 text-lg">I am a <span class="text-green-400" id="typing"></span></p>
 
-        <div class="absolute bottom-12 animate-bounce">
-            <a href="#expertise">
-                <div class="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </div>
+            <!-- Button for Resume -->
+            <a href="resume.pdf" download class="relative inline-flex items-center justify-center p-0.5 mb-6 mt-6 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 ">
+                    Download my resume
+                </span>
             </a>
-        </div>
-    </main>
+
+            <div class="absolute bottom-12 animate-bounce">
+                <a href="#expertise">
+                    <div class="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </main>
+        
 
     <!-- Expertise Section -->
     <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-zinc-950 px-6 py-16 text-white">
@@ -138,6 +148,7 @@
                 </button>
             </div>
         </div>
+    
     </section>
 
     <!-- projects 2 -->
@@ -294,7 +305,7 @@
     
             <!-- Social Media Links -->
             <div class="flex justify-center space-x-8 mb-16">
-                <a href="https://github.com/moses-mbugs" target="_blank" class="text-gray-800 hover:text-gray-100 transition-transform transform hover:scale-110 text-3xl">
+                <a href="https://github.com/moses-mbugs" target="_blank" class="text-green-800 hover:text-green-200 transition-transform transform hover:scale-110 text-3xl">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/moses-mbugua-muigai-01209620a/" target="_blank" class="text-blue-700 hover:text-blue-500 transition-transform transform hover:scale-110 text-3xl">
@@ -311,8 +322,12 @@
                     Let’s Work Together
                 </h3>
                 <p class="text-gray-100 text-lg leading-relaxed mb-8">
-                    Whether you’re looking for a developer to bring your project to life or collaborate on something exciting, feel free to reach out. I’m always open to new challenges and opportunities.
+                    Have an exciting project in mind ? 
                 </p>
+                <p class="text-gray-100 text-lg leading-relaxed mb-8">
+                    Send me an email or contact me through my socials.
+                </p>
+
                 <a href="mailto:mbuguam323@gmail.com" class="inline-block bg-green-500 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105">
                     Contact Me: mbuguam323@gmail.com
                 </a>
@@ -428,6 +443,10 @@
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // swirl effect
+         
+
 
     
     </script>
