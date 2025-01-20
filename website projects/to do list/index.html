@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Supabase JS library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <!-- Load your script after the DOM is ready -->
+    <script src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Add Task Card -->
+        <div class="card" id="addTaskCard">
+            <h2>Add a To-Do</h2>
+            <input type="text" id="taskInput" placeholder="Enter your task here...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Display All Tasks Card -->
+        <div class="card" id="allTasksCard">
+            <h2>All Tasks</h2>
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Completed Tasks Card -->
+        <div class="card" id="completedTasksCard">
+            <h2>Completed Tasks</h2>
+            <ul id="completedTaskList"></ul>
+        </div>
+    </div>
+</body>
+</html>

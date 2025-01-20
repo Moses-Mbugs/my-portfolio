@@ -1,0 +1,96 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container for horizontal layout */
+.cards-container {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Align cards in the center horizontally */
+    align-items: flex-start; /* Align cards to the top */
+    flex-wrap: wrap; /* Wrap cards to the next row if needed */
+  }
+  
+  .card {
+    flex: 1 1 300px; /* Flexible width, minimum 300px */
+    max-width: 350px; /* Set a maximum width */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .card input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #0056b3;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+/* Complete button */
+ul li button.complete {
+    background-color: #28a745;
+}
+
+ul li button.complete:hover {
+    background-color: #218838;
+}
+
+/* Delete button */
+ul li button.delete {
+    background-color: #dc3545;
+}
+
+ul li button.delete:hover {
+    background-color: #c82333;
+}
+/* */
