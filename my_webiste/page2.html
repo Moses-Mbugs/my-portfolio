@@ -3,128 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moses Mbugua</title>
+    <title>Moses Mbugua - Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'JetBrains Mono', monospace;
         }
         
+        .orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .gradient-animate {
+            background-size: 200% 200%;
+            animation: gradient-shift 8s ease infinite;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
-    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-zinc-950">
-        <a href="#home" class="text-2xl font-bold text-green-400">MosesMbugua<span class="text-gray-400">._</span></a>
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-zinc-950/90 backdrop-blur-sm z-50">
+        <a href="#home" class="text-2xl font-bold text-green-400 orbitron">MosesMbugua<span class="text-gray-400">._</span></a>
         <nav class="flex space-x-6 text-sm">
-            <a href="#home" class="hover:text-green-400">// home</a>
-            <a href="#expertise" class="hover:text-green-400">// expertise</a>
-            <a href="#projects" class="hover:text-green-400">// work</a>
-            <a href="#experience" class="hover:text-green-400">// experience</a>
-            <a href="#contact" class="hover:text-green-400">// contact</a>
+            <a href="#home" class="hover:text-green-400 transition">// home</a>
+            <a href="#expertise" class="hover:text-green-400 transition">// expertise</a>
+            <a href="#projects" class="hover:text-green-400 transition">// work</a>
+            <a href="#experience" class="hover:text-green-400 transition">// experience</a>
+            <a href="#achievements" class="hover:text-green-400 transition">// achievements</a>
+            <a href="#contact" class="hover:text-green-400 transition">// contact</a>
         </nav>
     </header>
 
     <!-- Intro Section -->
-    
-        <main id="home" class="flex flex-col items-center justify-center h-screen text-center pt-20">
-            <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-red-500 blur-lg opacity-10"></div>
-                <h1 class="text-6xl font-extrabold relative text-green-400">&lt;Hello, World!/&gt;</h1>
-            </div>
-            <h2 class="text-4xl font-bold mt-4">My name is <span class="text-green-400">Moses Mbugua</span></h2>
-            <p class="mt-4 text-lg">I am a <span class="text-green-400" id="typing"></span></p>
+    <main id="home" class="flex flex-col items-center justify-center h-screen text-center pt-20">
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 blur-2xl opacity-20"></div>
+            <h1 class="text-6xl font-extrabold relative text-green-400 orbitron float-animation">&lt;Hello, World!/&gt;</h1>
+        </div>
+        <h2 class="text-4xl font-bold mt-8">My name is <span class="text-green-400 orbitron">Moses Mbugua</span></h2>
+        <p class="mt-6 text-xl">I am a <span class="text-green-400 font-semibold" id="typing"></span></p>
+        <p class="mt-4 text-gray-400 max-w-2xl px-4">
+            Passionate Full Stack Developer skilled in Laravel, Django, Flutter, and modern web technologies. 
+            I build scalable, user-focused applications and thrive in agile teams.
+        </p>
 
-            <!-- Button for Resume -->
-            <a href="resume.pdf" download class="relative inline-flex items-center justify-center p-0.5 mb-6 mt-6 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 ">
-                    Download my resume
-                </span>
+        <!-- Button for Resume -->
+        <a href="Moses_Mbugua_cv_2026.pdf" download class="relative inline-flex items-center justify-center p-0.5 mb-6 mt-8 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-200">
+            <span class="relative px-6 py-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Download my resume
+            </span>
+        </a>
+
+        <div class="absolute bottom-12 animate-bounce">
+            <a href="#expertise">
+                <div class="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center hover:border-green-400 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
             </a>
-
-            <div class="absolute bottom-12 animate-bounce">
-                <a href="#expertise">
-                    <div class="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-12">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                </a>
-            </div>
-        </main>
-        
+        </div>
+    </main>
 
     <!-- Expertise Section -->
     <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-zinc-950 px-6 py-16 text-white">
-        <h2 class="text-5xl font-extrabold mb-12 tracking-wide text-center text-green-500">My Expertise</h2>
+        <h2 class="text-5xl font-extrabold mb-12 tracking-wide text-center text-green-500 orbitron">My Expertise</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl">
             <!-- Front-End Development Card -->
-            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 hover:border-green-500">
                 <div class="text-green-400 text-5xl mb-6">
                     <i class="fas fa-code"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Front-End Development</h3>
+                <h3 class="text-2xl font-semibold mb-4 orbitron">Front-End Development</h3>
                 <p class="text-gray-300 leading-relaxed">
-                    I specialize in crafting responsive, user-friendly interfaces using modern technologies like React and Tailwind CSS.
+                    I craft responsive, user-friendly interfaces using React.js, TypeScript, HTML5, and Tailwind CSS with a focus on modern design patterns.
                 </p>
             </div>
             <!-- Back-End Development Card -->
-            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 hover:border-blue-500">
                 <div class="text-blue-400 text-5xl mb-6">
                     <i class="fas fa-server"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Back-End Development</h3>
+                <h3 class="text-2xl font-semibold mb-4 orbitron">Back-End Development</h3>
                 <p class="text-gray-300 leading-relaxed">
-                    I build robust server-side solutions with frameworks like Node.js and Laravel, ensuring high performance and scalability.
+                    I build robust server-side solutions with Laravel, Django, Spring Boot, and Node.js, ensuring high performance and scalability.
                 </p>
             </div>
             <!-- Mobile App Development Card -->
-            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-800 border border-gray-700 shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 hover:border-yellow-500">
                 <div class="text-yellow-400 text-5xl mb-6">
                     <i class="fas fa-mobile-alt"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Mobile App Development</h3>
+                <h3 class="text-2xl font-semibold mb-4 orbitron">Mobile App Development</h3>
                 <p class="text-gray-300 leading-relaxed">
-                    I create seamless mobile applications with Flutter and Kotlin to deliver smooth, user-friendly experiences.
+                    I create seamless mobile applications with Flutter (Dart) and Kotlin to deliver smooth, intuitive experiences across platforms.
                 </p>
             </div>
         </div>
-        <!-- Icons Section -->
-        <div class="mt-12 flex flex-wrap justify-center space-x-8">
-            <i class="fab fa-react text-4xl text-cyan-400"></i>
-            <i class="fab fa-laravel text-4xl text-red-500"></i>
-            <i class="fab fa-js text-4xl text-yellow-400"></i>
-            <i class="fab fa-node text-4xl text-green-500"></i>
-            <i class="fab fa-flutter text-4xl text-blue-400"></i>
+        <!-- Tech Stack Icons -->
+        <div class="mt-16 flex flex-wrap justify-center gap-8 items-center">
+            <i class="fab fa-react text-5xl text-cyan-400 hover:scale-110 transition-transform" title="React.js"></i>
+            <i class="fab fa-laravel text-5xl text-red-500 hover:scale-110 transition-transform" title="Laravel"></i>
+            <i class="fab fa-js text-5xl text-yellow-400 hover:scale-110 transition-transform" title="JavaScript"></i>
+            <i class="fab fa-node text-5xl text-green-500 hover:scale-110 transition-transform" title="Node.js"></i>
+            <i class="fab fa-python text-5xl text-blue-400 hover:scale-110 transition-transform" title="Python/Django"></i>
+            <i class="fab fa-flutter text-5xl text-blue-400 hover:scale-110 transition-transform" title="Flutter"></i>
+            <i class="fab fa-java text-5xl text-red-600 hover:scale-110 transition-transform" title="Java/Spring Boot"></i>
+            <i class="fab fa-aws text-5xl text-orange-400 hover:scale-110 transition-transform" title="AWS"></i>
         </div>
     </section>
-    
 
     <!-- Work Section -->
     <section id="projects" class="min-h-screen bg-zinc-900 flex flex-col items-center justify-center px-6 py-12">
-        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between space-y-6 lg:space-y-0 lg:space-x-8 max-w-6xl">
-            <h2 class="text-4xl font-extrabold text-green-500 mb-8 ">Featured Project</h2>
+        <h2 class="text-5xl font-extrabold text-green-500 mb-16 orbitron text-center">Featured Projects</h2>
+        
+        <!-- Mzalendo Project -->
+        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between space-y-6 lg:space-y-0 lg:space-x-12 max-w-6xl mb-20">
             <!-- Left Content -->
             <div class="lg:w-1/2 text-center lg:text-left">
-                
-                <h2 class="text-3xl font-bold text-gray-100 mb-4">
-                    Mzalendo - Android App</h2>
-                <p class="text-gray-200 mb-6  ">
-                    Mzalendo is an interactive game. You get to pick from different categories and answer questions. The game is designed to be fun and educational on Kenyan matters. 
-                    It is a great way to experience Kenya in a humorous way, and get to know random facts.
+                <div class="inline-block bg-green-500/10 border border-green-500 rounded-full px-4 py-1 text-green-400 text-xs mb-4">
+                    LIVE ON PLAY STORE
+                </div>
+                <h3 class="text-4xl font-bold text-gray-100 mb-4 orbitron">Mzalendo - Android App</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    An interactive quiz game built with Kotlin that educates users on Kenyan culture, history, and trivia. 
+                    Features multiple categories, engaging gameplay, and a humorous take on Kenyan facts.
                 </p>
-                <p class="text-green-500 text-xs italic mb-8">
-                    Disclaimer: This app is a continuous development app; hence changes and updates are done regularly.
+                <p class="text-green-400 text-sm italic mb-8 bg-green-500/5 p-3 rounded border-l-4 border-green-500">
+                    Achievement: Singlehandedly built, tested, and deployed — now live on Google Play Store
                 </p>
-                <a href="https://play.google.com/store/apps/details?id=com.mzalendo.quizapp&hl=en" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 transition">
-                    Download from Play Store
-                </a>
+                <div class="flex gap-4 justify-center lg:justify-start">
+                    <a href="https://play.google.com/store/apps/details?id=com.mzalendo.quizapp&hl=en" target="_blank" 
+                       class="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition transform hover:scale-105">
+                        <i class="fab fa-google-play mr-2"></i>
+                        Download from Play Store
+                    </a>
+                </div>
             </div>
 
             <!-- Right Slideshow -->
             <div class="lg:w-1/2 relative flex justify-center">
-                <div class="relative w-[250px] h-[515px] overflow-hidden rounded-lg shadow-lg">
+                <div class="relative w-[250px] h-[515px] overflow-hidden rounded-2xl shadow-2xl border-4 border-gray-800">
                     <div class="slideshow relative flex flex-col items-center h-full">
                         <!-- Vertical Images -->
                         <img src="images/mzalendo1.jpg" alt="Screenshot 1" 
@@ -140,77 +176,90 @@
                     </div>
                 </div>
                 <!-- Navigation Buttons -->
-                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition" id="prev">
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-500 transition" id="prev">
                     &#8592;
                 </button>
-                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition" id="next">
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-500 transition" id="next">
                     &#8594;
                 </button>
             </div>
         </div>
-    
     </section>
 
-    <!-- projects 2 -->
+    <!-- Other Projects Section -->
     <section id="projects2" class="min-h-screen bg-black px-6 py-12 flex flex-col items-center justify-center">
         <div class="w-full max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-green-500 text-center mb-16">
-                Other Projects Done
+            <h2 class="text-4xl font-extrabold text-green-500 text-center mb-16 orbitron">
+                Other Notable Projects
             </h2>
     
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- SkyCast -->
-                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-blue-500">
                     <img src="images/skycast.jpg" alt="SkyCast" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-100 mb-2">SkyCast</h3>
-                        <p class="text-gray-200 text-sm mb-4">
-                            A mobile weather app built with Dart and Flutter, providing real-time weather updates via OpenWeatherAPI.
+                        <div class="inline-block bg-blue-500/10 border border-blue-500 rounded-full px-3 py-1 text-blue-400 text-xs mb-3">
+                            Flutter • Dart
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2 orbitron">SkyCast</h3>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Mobile weather app providing real-time updates via OpenWeatherAPI with an intuitive UI.
                         </p>
-                        <a href="#" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
+                        <a href="#" class="inline-block text-sm font-medium text-green-400 hover:text-green-500 transition">
                             Get APK &rarr;
                         </a>
                     </div>
                 </div>
     
                 <!-- Nairobi Temperatures -->
-                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-purple-500">
                     <img src="images/temp.jpeg" alt="Nairobi Temperatures" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-100 mb-2">Nairobi Temperature Prediction</h3>
-                        <p class="text-gray-200 text-sm mb-4">
-                            A machine learning model trained with 30 years of data to predict Nairobi's temperatures.
+                        <div class="inline-block bg-purple-500/10 border border-purple-500 rounded-full px-3 py-1 text-purple-400 text-xs mb-3">
+                            Machine Learning • R
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2 orbitron">Temperature Prediction</h3>
+                        <p class="text-gray-300 text-sm mb-4">
+                            ML model trained on 30 years of data to predict Nairobi's temperatures with high accuracy.
                         </p>
-                        <a href="https://github.com/Moses-Mbugs/Nairobi-temperature" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
+                        <a href="https://github.com/Moses-Mbugs/Nairobi-temperature" target="_blank" class="inline-block text-sm font-medium text-green-400 hover:text-green-500 transition">
                             GitHub Link &rarr;
                         </a>
                     </div>
                 </div>
     
-                <!-- Random App -->
-                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                    <img src="images/random.jpg" alt="Random App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Apprentice -->
+                <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-yellow-500">
+                    <div class="w-full h-52 bg-gradient-to-br from-yellow-600 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-user-graduate text-6xl text-white opacity-20"></i>
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-100 mb-2">The Random App</h3>
-                        <p class="text-gray-200 text-sm mb-4">
-                            A Flutter app delivering "Did You Know" facts across categories, designed with a Retro-Neobrutalism aesthetic.
+                        <div class="inline-block bg-yellow-500/10 border border-yellow-500 rounded-full px-3 py-1 text-yellow-400 text-xs mb-3">
+                            PHP • Laravel
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2 orbitron">Apprentice</h3>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Web platform connecting young IT practitioners with industry experts for mentorship and networking.
                         </p>
-                        <a href="#" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
+                        <a href="#" class="inline-block text-sm font-medium text-green-400 hover:text-green-500 transition">
                             Learn More &rarr;
                         </a>
                     </div>
                 </div>
     
-                <!-- Comic App -->
-                <div class="group relative bg-gradient-to-br from-gray-900  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                    <img src="images/comic.jpg" alt="Comic App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Random App -->
+                <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-green-500">
+                    <img src="images/random.jpg" alt="Random App" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-100 mb-2">The Comic/Book App</h3>
-                        <p class="text-gray-100 text-sm mb-4">
-                            An app for comic and book enthusiasts to discover both free and paid titles.
+                        <div class="inline-block bg-green-500/10 border border-green-500 rounded-full px-3 py-1 text-green-400 text-xs mb-3">
+                            Flutter • Design
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2 orbitron">The Random App</h3>
+                        <p class="text-gray-300 text-sm mb-4">
+                            "Did You Know" facts app with Retro-Neobrutalism aesthetic across multiple categories.
                         </p>
-                        <a href="#" class="inline-block text-sm font-medium text-green-500 hover:text-green-600">
-                            Get the Book &rarr;
+                        <a href="#" class="inline-block text-sm font-medium text-green-400 hover:text-green-500 transition">
+                            Learn More &rarr;
                         </a>
                     </div>
                 </div>
@@ -219,138 +268,320 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="min-h-screen bg-black text-white py-16 px-8 pt-20">
+    <section id="experience" class="min-h-screen bg-gradient-to-br from-zinc-950 to-gray-900 text-white py-20 px-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-center text-green-500 mb-12">Professional Experience</h2>
+            <h2 class="text-5xl font-extrabold text-center text-green-500 mb-16 orbitron">Professional Journey</h2>
             
             <div class="relative">
                 <!-- Timeline Container -->
-                <div class="timeline-container flex items-center overflow-x-auto space-x-16 p-8 border-t-2 border-gray-200">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item flex flex-col items-center w-64">
-                        <div class="timeline-icon w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                            TCC
+                <div class="space-y-12">
+                    <!-- Ecobank Kenya - Current -->
+                    <div class="relative pl-8 border-l-4 border-green-500">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-zinc-950"></div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-green-500 transition">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold text-green-400 orbitron">Ecobank Kenya</h3>
+                                <span class="text-sm text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500">Current</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">Software Developer • Apr 2025 - Present</p>
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">▹</span>
+                                    Building automated software solutions using Laravel and Flutter for internal and customer-facing applications
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">▹</span>
+                                    Designing and consuming RESTful APIs for seamless data integration across services
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">▹</span>
+                                    Collaborating with cross-functional teams in Agile-driven delivery
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">▹</span>
+                                    Optimizing code for efficiency, maintainability, and scalability
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-100 text-left " >Texas Cancer Center</h3>
-                        <p class="text-sm text-green-500 italic mb-4 text-center ">Volunteer • Jan 2021 – Mar 2021</p>
-                        <ul class="text-gray-200 text-sm space-y-3 text-left">
-                            <li>• Managed housekeeping, bookkeeping, and data entry tasks.</li>
-                            <li>• Enhanced communication skills through patient interaction.</li>
-                            <li>• Fostered connections and developed empathy in healthcare settings.</li>
-                        </ul>
                     </div>
 
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item flex flex-col items-center w-64">
-                        <div class="timeline-icon w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                            KU
+                    <!-- Creatives Garage -->
+                    <div class="relative pl-8 border-l-4 border-blue-500">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-zinc-950"></div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-blue-500 transition">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold text-blue-400 orbitron">Creatives Garage (NGO)</h3>
+                            </div>
+                            <p class="text-gray-400 mb-4">Web and Mobile Application Developer • May 2024 - Apr 2025</p>
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="text-blue-400 mr-2">▹</span>
+                                    Built custom mobile application "Mzalendo" now live on Google Play Store
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-400 mr-2">▹</span>
+                                    Enhanced websites with new functions and pages
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-400 mr-2">▹</span>
+                                    Provided IT support across the organization
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-100 text-center ">Kenyatta University Teaching Referral Research Hospital</h3>
-                        <p class="text-sm text-green-500 italic mb-4 text-center ">Web Application Developer (Attachee) • Jan 2023 – Apr 2023</p>
-                        <ul class="text-gray-200 text-sm space-y-3 text-left">
-                            <li>• Built a comprehensive web application using Laravel.</li>
-                            <li>• Developed round-robin scheduling for nurse intern placements.</li>
-                            <li>• Successfully deployed the system with the team.</li>
-                            <li>• Addressed intern management challenges in healthcare.</li>
-                        </ul>
                     </div>
 
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item flex flex-col items-center w-64">
-                        <div class="timeline-icon w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                            PC
+                    <!-- Palla Credit Limited -->
+                    <div class="relative pl-8 border-l-4 border-purple-500">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-purple-500 rounded-full border-4 border-zinc-950"></div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition">
+                            <h3 class="text-2xl font-bold text-purple-400 orbitron mb-2">Palla Credit Limited</h3>
+                            <p class="text-gray-400 mb-4">Business Developer Intern • Jan 2024 - Mar 2024</p>
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="text-purple-400 mr-2">▹</span>
+                                    Proposed workflow automation software and training to streamline processes
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-400 mr-2">▹</span>
+                                    Recommended customer feedback mechanisms to enhance satisfaction
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-purple-400 mr-2">▹</span>
+                                    Formulated strategic development goals
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-100 text-center">Palla Credit Limited</h3>
-                        <p class="text-sm text-green-500 italic mb-4 text-center">Business Developer Intern • Jan 2024 – Mar 2024</p>
-                        <ul class="text-gray-200 text-sm space-y-3 text-left">
-                            <li>• Proposed workflow automation and efficiency strategies.</li>
-                            <li>• Recommended feedback systems to enhance customer satisfaction.</li>
-                            <li>• Formulated short-term and long-term development goals.</li>
-                        </ul>
                     </div>
 
-                    <!-- Timeline Item 4 -->
-                    <div class="timeline-item flex flex-col items-center w-64">
-                        <div class="timeline-icon w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                            CG
+                    <!-- KUTRRH -->
+                    <div class="relative pl-8 border-l-4 border-yellow-500">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-yellow-500 rounded-full border-4 border-zinc-950"></div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-yellow-500 transition">
+                            <h3 class="text-2xl font-bold text-yellow-400 orbitron mb-2">Kenyatta University Hospital</h3>
+                            <p class="text-gray-400 mb-4">Web Application Developer Attachee • Jan 2023 - Apr 2023</p>
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="text-yellow-400 mr-2">▹</span>
+                                    Developed comprehensive web application using Laravel from the ground up
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-yellow-400 mr-2">▹</span>
+                                    Implemented round-robin scheduling for nurse intern ward assignments
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-yellow-400 mr-2">▹</span>
+                                    Successfully deployed the application showcasing technical proficiency
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-100 text-center">Creatives Garage (NGO)</h3>
-                        <p class="text-sm text-green-500 italic mb-4 text-center">Web and Mobile Application Developer • May 2024 – Present</p>
-                        <ul class="text-gray-200 text-sm space-y-3 text-left">
-                            <li>• Maintained existing systems and optimized performance.</li>
-                            <li>• Built custom mobile applications like <strong>Mzalendo</strong>.</li>
-                            <li>• Enhanced websites with new functions and pages.</li>
-                            <li>• Provided IT support across the organization.</li>
-                        </ul>
+                    </div>
+
+                    <!-- Texas Cancer Center -->
+                    <div class="relative pl-8 border-l-4 border-red-500">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-red-500 rounded-full border-4 border-zinc-950"></div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-red-500 transition">
+                            <h3 class="text-2xl font-bold text-red-400 orbitron mb-2">Texas Cancer Center</h3>
+                            <p class="text-gray-400 mb-4">Volunteer • Jan 2021 - Mar 2021</p>
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">▹</span>
+                                    Managed diverse responsibilities including housekeeping, bookkeeping, and data entry
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">▹</span>
+                                    Enhanced communication skills through patient interactions
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="min-h-screen bg-black py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-extrabold text-center text-green-500 mb-16 orbitron">Key Achievements</h2>
             
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Achievement 1 -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl p-8 hover:border-green-500 transition-all hover:shadow-2xl hover:shadow-green-500/20">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-green-400 text-3xl flex-shrink-0">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-400 mb-2">Mobile App Launch</h3>
+                            <p class="text-gray-300 text-sm">
+                                Singlehandedly built, tested, and deployed the "Mzalendo" Android app using Kotlin, 
+                                delivering a smooth, intuitive experience — now live on the Google Play Store.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl p-8 hover:border-blue-500 transition-all hover:shadow-2xl hover:shadow-blue-500/20">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-blue-400 text-3xl flex-shrink-0">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-400 mb-2">B2C Reconciliation System</h3>
+                            <p class="text-gray-300 text-sm">
+                                Developed automated Bank-to-Customer (B2C) reconciliation system integrating M-Pesa 
+                                and banking transactions to enhance financial accuracy and efficiency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl p-8 hover:border-purple-500 transition-all hover:shadow-2xl hover:shadow-purple-500/20">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl flex-shrink-0">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-purple-400 mb-2">AI-Driven HR System</h3>
+                            <p class="text-gray-300 text-sm">
+                                Built AI-driven Human Resource system with smart chatbot assistant capable of filtering 
+                                potential employees and responding to staff queries based on organizational policies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl p-8 hover:border-yellow-500 transition-all hover:shadow-2xl hover:shadow-yellow-500/20">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-yellow-400 text-3xl flex-shrink-0">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-yellow-400 mb-2">Digital Lending Innovation</h3>
+                            <p class="text-gray-300 text-sm">
+                                Designed and implemented digital lending scorecard and developed mobile app interfaces 
+                                to improve user experience and decision-making processes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl p-8 hover:border-red-500 transition-all hover:shadow-2xl hover:shadow-red-500/20">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-red-400 text-3xl flex-shrink-0">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-red-400 mb-2">Sustainable Process Redesign</h3>
+                            <p class="text-gray-300 text-sm">
+                                Redesigned branch forms, reducing paper waste and operational costs while improving 
+                                customer experience across multiple African affiliates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="min-h-screen bg-gray-900 py-20 px-6">
+    <section id="contact" class="min-h-screen bg-gradient-to-br from-gray-900 via-zinc-950 to-black py-20 px-6">
         <div class="max-w-7xl mx-auto text-center">
             <!-- Title -->
-            <h2 class="text-5xl font-extrabold text-green-500 mb-8 tracking-tight">
+            <h2 class="text-5xl font-extrabold text-green-500 mb-8 tracking-tight orbitron">
                 Get in Touch
             </h2>
-            <p class="text-gray-100 mb-6 text-lg leading-relaxed">
-                I’m available for select freelance projects and collaborations. Got a project in mind? Let’s team up and make it happen!
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed max-w-2xl mx-auto">
+                I'm available for select freelance projects and collaborations. Got a project in mind? Let's team up and make it happen!
             </p>
-            <p class="text-gray-100 mb-12 text-lg">
+            <p class="text-gray-300 mb-12 text-lg">
                 Reach out through my socials or email below.
             </p>
     
             <!-- Social Media Links -->
             <div class="flex justify-center space-x-8 mb-16">
-                <a href="https://github.com/moses-mbugs" target="_blank" class="text-green-800 hover:text-green-200 transition-transform transform hover:scale-110 text-3xl">
+                <a href="https://github.com/moses-mbugs" target="_blank" 
+                   class="text-gray-400 hover:text-green-400 transition-all transform hover:scale-125 text-4xl">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/moses-mbugua-muigai-01209620a/" target="_blank" class="text-blue-700 hover:text-blue-500 transition-transform transform hover:scale-110 text-3xl">
+                <a href="https://www.linkedin.com/in/moses-mbugua-muigai-01209620a/" target="_blank" 
+                   class="text-gray-400 hover:text-blue-500 transition-all transform hover:scale-125 text-4xl">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com/mosaayyyy/" target="_blank" class="text-pink-600 hover:text-pink-700 transition-transform transform hover:scale-110 text-3xl">
+                <a href="https://www.instagram.com/mosaayyyy/" target="_blank" 
+                   class="text-gray-400 hover:text-pink-500 transition-all transform hover:scale-125 text-4xl">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
     
-            <!-- Freelance Inquiry -->
-            <div class="bg-black shadow-xl rounded-lg px-10 py-12 mx-auto max-w-4xl">
-                <h3 class="text-3xl font-bold text-gray-100 mb-6">
-                    Let’s Work Together
+            <!-- Contact Card -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 shadow-2xl rounded-2xl px-10 py-12 mx-auto max-w-4xl border border-gray-700 hover:border-green-500 transition-all">
+                <h3 class="text-3xl font-bold text-gray-100 mb-6 orbitron">
+                    Let's Work Together
                 </h3>
-                <p class="text-gray-100 text-lg leading-relaxed mb-8">
-                    Have an exciting project in mind ? 
-                </p>
-                <p class="text-gray-100 text-lg leading-relaxed mb-8">
-                    Send me an email or contact me through my socials.
+                <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                    Have an exciting project in mind? I'm passionate about building impactful applications 
+                    and contributing to innovative teams.
                 </p>
 
-                <a href="mailto:mbuguam323@gmail.com" class="inline-block bg-green-500 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105">
-                    Contact Me: mbuguam323@gmail.com
+                <div class="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-8">
+                    <div class="flex items-center justify-center space-x-4 text-gray-300">
+                        <i class="fas fa-envelope text-green-400 text-2xl"></i>
+                        <span class="text-lg">mbuguam323@gmail.com</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 text-gray-300 mt-4">
+                        <i class="fas fa-phone text-green-400 text-2xl"></i>
+                        <span class="text-lg">+254 758 193 688</span>
+                    </div>
+                </div>
+
+                <a href="mailto:mbuguam323@gmail.com" 
+                   class="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:from-green-600 hover:to-blue-600 transition-all transform hover:scale-105">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Send Message
                 </a>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt text-green-400 text-3xl mb-3"></i>
+                    <p class="text-gray-400">Mombasa, Kenya</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-graduation-cap text-green-400 text-3xl mb-3"></i>
+                    <p class="text-gray-400">BBIT - Strathmore University</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-certificate text-green-400 text-3xl mb-3"></i>
+                    <p class="text-gray-400">AWS • Cyber Security • Data Protection</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Back-to-Top Button -->
-    <button id="backToTop" class="hidden fixed bottom-8 right-8 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
-        <i class="fas fa-arrow-up"></i>
+    <button id="backToTop" class="hidden fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 z-50">
+        <i class="fas fa-arrow-up text-xl"></i>
     </button>
 
-    <!-- footer -->
-    <footer class="py-6 bg-gray-800 text-center text-gray-400">
-        <p class="text-sm">©2025 Moses Mbugua Muigai. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-center text-gray-400 border-t border-gray-800">
+        <p class="text-sm">© 2026 Moses Mbugua Muigai. All Rights Reserved.</p>
+        <p class="text-xs mt-2 text-gray-500">Built with passion • Powered by innovation</p>
     </footer>
 
     <script>
         // Typing animation
         const typingElement = document.getElementById("typing");
         const typingTexts = [
-            "Junior Fullstack Developer",
-            "Mobile Application Developer"
+            "Full Stack Developer",
+            "Mobile Application Developer",
+            "Software Engineer"
         ];
         let typingIndex = 0, charIndex = 0;
         let isDeleting = false;
@@ -363,10 +594,10 @@
                 charIndex++;
             }
             typingElement.textContent = currentText.slice(0, charIndex);
-            typingElement.style.borderRight = "2px solid green";
+            typingElement.style.borderRight = "2px solid #10b981";
 
             if (!isDeleting && charIndex === currentText.length) {
-                setTimeout(() => (isDeleting = true), 1000);
+                setTimeout(() => (isDeleting = true), 1500);
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 typingIndex = (typingIndex + 1) % typingTexts.length;
@@ -377,7 +608,7 @@
 
         type();
 
-        // slideshow
+        // Slideshow
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.slideshow img');
             const prevButton = document.getElementById('prev');
@@ -401,39 +632,41 @@
                 showSlide(currentSlide);
             };
     
-            // Set up interval for auto slide
             let slideInterval = setInterval(nextSlide, 3000);
     
-            // Add event listeners for arrows
             nextButton.addEventListener('click', () => {
                 clearInterval(slideInterval);
                 nextSlide();
-                slideInterval = setInterval(nextSlide, 3000); // Restart auto slide
+                slideInterval = setInterval(nextSlide, 3000);
             });
     
             prevButton.addEventListener('click', () => {
                 clearInterval(slideInterval);
                 prevSlide();
-                slideInterval = setInterval(nextSlide, 3000); // Restart auto slide
+                slideInterval = setInterval(nextSlide, 3000);
             });
     
-            // Initialize first slide
             showSlide(currentSlide);
         });
 
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
 
-        // Back-to-Top Button Logic
+        // Back-to-Top Button
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
+            if (window.scrollY > 300) {
                 backToTop.classList.remove('hidden');
             } else {
                 backToTop.classList.add('hidden');
@@ -444,11 +677,27 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // swirl effect
-         
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-    
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
